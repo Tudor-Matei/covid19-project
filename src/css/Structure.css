@@ -1,0 +1,127 @@
+.landing-structure {
+  display: grid;
+  justify-items: center;
+  align-items: flex-end;
+  min-height: 50vh;
+}
+
+.structure-description {
+  max-width: 700px;
+}
+
+.structure-description:nth-of-type(even) {
+  color: var(--accent-primary-1);
+  border-color: var(--accent-primary-1);
+}
+
+.structure-description:nth-of-type(odd) {
+  color: var(--accent-primary-2);
+  border-color: var(--accent-primary-2);
+}
+
+.structure-description p {
+  color: inherit;
+  font-size: 1.2em;
+}
+.structure-description hr {
+  border-width: 5px;
+  border-style: solid;
+  border-color: inherit;
+}
+
+.covid19-title {
+  display: grid;
+  justify-items: center;
+  margin-top: -150px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.covid19-title__image::before {
+  content: "";
+  background: url("../images/covid19-1.png") center center / cover no-repeat;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+.covid19-title__image {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  z-index: 0;
+  background: var(--gradient-primary-2-only);
+  border-radius: 50%;
+}
+
+.covid19-title__curved-text {
+  background: url("../svg/Virus-structure-text.svg") center center / cover no-repeat;
+  width: 250px;
+  min-height: 70px;
+  margin-top: -30px;
+}
+
+.general-data {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 48vh auto;
+  opacity: 0;
+  transition: opacity 300ms linear;
+}
+
+.general-data__covid19-image {
+  flex-basis: 300px;
+  height: 300px;
+  background: var(--gradient-primary-1-only);
+  box-shadow: var(--glow-primary-1);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.general-data__covid19-diameter-arrow {
+  background: url("../svg//Double-arrow.svg") center center / contain no-repeat;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.e-proteins {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.e-proteins__covid19-image {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: var(--accent-primary-2-light-1);
+  box-shadow: var(--glow-primary-2);
+  border-radius: 50%;
+}
+
+.e-proteins__covid19-image::before,
+.e-proteins__covid19-image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-style: dashed;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.e-proteins__covid19-image::before {
+  border-width: 10px;
+  inset: -10px;
+  border-color: var(--accent-primary-1);
+}
+.e-proteins__covid19-image::after {
+  inset: -20px;
+  border-width: 20px;
+  border-color: var(--accent-primary-2);
+}
