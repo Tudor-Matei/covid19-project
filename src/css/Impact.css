@@ -1,0 +1,573 @@
+.image-text-pane {
+  height: fit-content;
+}
+
+.image-text-pane__image {
+  width: 100%;
+  height: 40%;
+  min-height: 200px;
+}
+
+.image-text-pane__text {
+  padding: 2em;
+  width: 100%;
+}
+
+.title-separator-impact {
+  background: var(--gradient-primary-2-only);
+  box-shadow: var(--glow-primary-2);
+  transform: rotateZ(7.7deg);
+  padding: 0 4em;
+  display: grid;
+  place-items: center;
+  width: fit-content;
+  color: var(--accent-primary-2-light-2);
+  text-transform: uppercase;
+}
+
+.landing-impact {
+  display: grid;
+  align-content: flex-end;
+  padding-bottom: 9.5vh;
+}
+
+.quarantine {
+  width: 100%;
+  position: relative;
+  background: url("../images/UN-room.webp") center center / cover no-repeat;
+  min-height: 70vh;
+  display: grid;
+  align-content: flex-end;
+  margin-bottom: 50vh;
+  padding: 0 8em;
+}
+
+.quarantine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary-1-only);
+  opacity: 0.5;
+}
+
+.quarantine__information-box {
+  padding: 2em;
+  background-color: var(--accent-primary-1-light-1);
+  border: 5px solid var(--accent-primary-1);
+  box-shadow: var(--glow-primary-1);
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  transform: translateY(50px);
+}
+
+.quarantine__information-box p {
+  color: var(--accent-primary-1-dark-3);
+  text-align: justify;
+}
+
+.quarantine-effects {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50vh;
+}
+
+.quarantine-effects > h1 {
+  color: var(--accent-primary-1-light-1);
+  font-size: 3em;
+  text-shadow: var(--selected-shadow-primary-1);
+}
+
+.quarantine-effects__prequel {
+  background-color: var(--accent-primary-2-light-1);
+  box-shadow: var(--solid-shadow-primary-2);
+  color: var(--accent-primary-2);
+  padding: 2em;
+  max-width: 30em;
+  margin: 0 auto 10em;
+  position: relative;
+  z-index: 2;
+}
+
+.quarantine-effects__prequel p {
+  color: inherit;
+}
+
+.quarantine-effects__libra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(2);
+  opacity: 0.04;
+  z-index: 0;
+}
+
+.quarantine-effects__points {
+  padding: 3em 1em 5em;
+  font-family: var(--font-secondary);
+  box-shadow: var(--main-box-shadow);
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  height: fit-content;
+}
+
+.quarantine-effects__points::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+}
+
+.quarantine-effects__points h2 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.quarantine-effects__points ul {
+  margin: auto;
+  padding-left: 10px;
+}
+.quarantine-effects__points ul li {
+  list-style-type: none;
+  font-size: 1.2em;
+}
+
+.quarantine-effects__points ul li:not(.quarantine-effects__points ul li:last-child) {
+  margin-bottom: 20px;
+}
+
+.quarantine-effects__points ul li::before {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+  padding-top: 6px;
+}
+
+.quarantine-effects__points--positives {
+  background-color: var(--accent-primary-2-light-1);
+  color: var(--accent-primary-2-dark-1);
+}
+
+.quarantine-effects__points--positives::before {
+  background: var(--gradient-primary-2-only);
+}
+
+.quarantine-effects__points--positives ul li::before {
+  content: url("../svg/Arrow-right-blue.svg");
+}
+
+.quarantine-effects__points--negatives {
+  background-color: var(--accent-primary-1-light-2);
+  color: var(--accent-primary-1-dark-2);
+  transform: translateY(10em);
+}
+
+.quarantine-effects__points--negatives::before {
+  background: var(--gradient-primary-1-only);
+}
+
+.quarantine-effects__points--negatives ul li::before {
+  content: url("../svg/Arrow-right.svg");
+}
+
+.mental-health {
+  position: relative;
+  margin-bottom: 20vh;
+}
+
+.mental-health::before,
+.mental-health::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-primary-1-light-1);
+  box-shadow: var(--solid-shadow-primary-1);
+  top: -20px;
+}
+
+.mental-health::before {
+  width: 90%;
+  height: 5px;
+  left: 0;
+}
+.mental-health::after {
+  width: 5px;
+  right: 10%;
+  height: 100%;
+}
+
+.mental-health__pane {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40vh;
+  font-size: 1.3em;
+  position: relative;
+  z-index: 2;
+}
+
+.mental-health__pane p {
+  margin: 0 50px;
+  text-align: justify;
+}
+.mental-health__pane p:first-child {
+  margin-left: 0;
+}
+
+.mental-health__pane p:last-child {
+  margin-right: 0;
+}
+
+.polarisation {
+  position: relative;
+  width: 100%;
+  padding-top: 5em;
+  margin-bottom: 50vh;
+  z-index: 2;
+}
+
+.polarisation__text {
+  padding: 2em 4em;
+  text-align: justify;
+  color: var(--text-gray);
+}
+
+.polarisation__text:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.polarisation__text:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.polarisation__text p {
+  color: inherit;
+  font-size: 1.2em;
+  line-height: 1.7em;
+}
+
+.polarisation__pro,
+.polarisation__con {
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  transform: rotateZ(45deg);
+  display: flex;
+  padding: 5em;
+  z-index: -1;
+}
+
+.polarisation__pro svg,
+.polarisation__con svg {
+  width: 200px;
+  height: 200px;
+  color: inherit;
+  transform: rotateZ(-45deg);
+}
+
+.polarisation__pro::before,
+.polarisation__con::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.polarisation__pro {
+  background: url("../images/polarisation-pros.jpg") center center / cover no-repeat;
+  left: -20%;
+  justify-content: flex-end;
+  color: var(--accent-primary-1-dark-2);
+}
+
+.polarisation__pro::before {
+  background: var(--gradient-primary-1-only);
+}
+
+.polarisation__con {
+  background: url("../images/polarisation-cons.jpg") center center / cover no-repeat;
+  justify-content: flex-start;
+  align-items: flex-end;
+  right: -20%;
+  color: var(--accent-primary-2-light-1);
+}
+
+.polarisation__con::before {
+  background: var(--gradient-primary-2-only);
+}
+
+.economy-recession-sep {
+  margin: 50px 0;
+}
+
+.recession {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 40vh;
+}
+
+.recession .image-text-pane {
+  width: 48%;
+}
+.recession__stocks-down {
+  margin-top: 50px;
+  background: var(--gradient-primary-2-only);
+  display: flex;
+}
+
+.recession__stocks-down p {
+  text-align: justify;
+  color: var(--accent-primary-2-light-1);
+  padding: 2em;
+  line-height: 2em;
+}
+
+.recession__stocks-down-image {
+  position: relative;
+  background: url("../images/stocks-down.jpg") center center / cover no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.recession__stocks-down-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary-2-only);
+  opacity: 0.6;
+}
+
+.shortages {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  place-items: center;
+  row-gap: 100px;
+  column-gap: 40px;
+  margin-bottom: 40vh;
+}
+
+.shortages p {
+  text-align: justify;
+  font-size: 1.3em;
+  line-height: 1.7em;
+}
+
+.shortages p:nth-of-type(1) {
+  color: var(--accent-primary-2-dark-1);
+}
+
+.shortages p:nth-of-type(2) {
+  color: var(--accent-primary-1-dark-1);
+}
+
+.shortages__goods-image,
+.shortages__taiwan-image {
+  width: max(300px, 50vh);
+  height: max(300px, 50vh);
+  border-radius: 50%;
+  box-shadow: var(--main-box-shadow);
+}
+
+.shortages__goods-image {
+  background: var(--gradient-primary-2-only);
+  display: grid;
+  place-items: center;
+  color: var(--accent-primary-2-light-2);
+}
+
+.shortages__goods-image svg {
+  width: 70px;
+  height: 70px;
+}
+.shortages__goods-image svg:nth-child(1) {
+  margin-right: 40px;
+}
+.shortages__goods-image svg:nth-child(2) {
+  margin-left: 150px;
+}
+.shortages__goods-image svg:nth-child(3) {
+  margin-right: 70px;
+}
+
+.shortages__taiwan-image {
+  background: url("../images/taiwan-flag.jpg") center center / cover no-repeat;
+  position: relative;
+}
+
+.shortages__taiwan-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary-1-only);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.industry__general-information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-right: 5em;
+  margin-bottom: 20vh;
+}
+
+.industry__general-information::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -60px;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 200px solid var(--accent-primary-2-light-1);
+}
+
+.industry__general-information p {
+  position: relative;
+  color: var(--accent-primary-1-dark-2);
+  text-align: justify;
+  font-size: 1.3em;
+  line-height: 1.7em;
+  max-width: 60%;
+  z-index: 2;
+}
+
+.industry__general-information p::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -25px;
+  z-index: -1;
+  background-color: var(--accent-primary-1-light-1);
+  min-width: 120px;
+  min-height: 120px;
+}
+
+.industry__general-information-image {
+  max-width: 300px;
+  max-height: 415px;
+  box-shadow: var(--solid-shadow-primary-1);
+  position: relative;
+}
+
+.industry > h2 {
+  color: var(--accent-primary-2);
+}
+
+.industry__most-affected {
+  margin-top: 30px;
+  display: flex;
+}
+
+.industry__affected {
+  width: 25%;
+  height: 100%;
+  min-height: 250px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 1em;
+  text-align: center;
+  margin-bottom: 30vh;
+}
+
+.industry__affected > svg {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  inset: 0;
+  margin: auto;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.industry__affected:not(.industry__affected:first-child) {
+  box-shadow: -6px 0px 39px 0px hsla(0, 0%, 0%, 0.15);
+}
+
+.industry__affected p {
+  color: inherit;
+  font-size: 1.3em;
+}
+
+.industry__affected:nth-child(1) {
+  background-color: var(--accent-primary-2-light-3);
+  color: var(--accent-primary-2-dark-1);
+}
+
+.industry__affected:nth-child(2) {
+  background-color: var(--accent-primary-2-light-2);
+  color: var(--accent-primary-2-dark-1);
+}
+
+.industry__affected:nth-child(3) {
+  background-color: var(--accent-primary-2-light-1);
+  color: var(--accent-primary-2-dark-1);
+}
+
+.industry__affected:nth-child(4) {
+  background-color: var(--accent-primary-2);
+  color: var(--accent-primary-2-light-1);
+}
+
+.tourism-industry-impact {
+  width: 100%;
+  padding: 5em;
+  position: relative;
+  z-index: 1;
+  background: url("../images/mountains-panoramic.jpg") center center / cover no-repeat;
+}
+
+.tourism-industry-impact::before,
+.tourism-industry-impact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.tourism-industry-impact::before {
+  background: var(--gradient-primary-1-only);
+}
+
+.tourism-industry-impact::after {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.tourism-industry-impact h1 {
+  text-align: center;
+  color: var(--accent-primary-1-light-1);
+  margin-bottom: 2.5em;
+}
+
+.tourism-industry-impact p {
+  color: var(--accent-primary-1-light-3);
+  text-align: justify;
+  font-size: 1.2em;
+  margin-bottom: 50px;
+}

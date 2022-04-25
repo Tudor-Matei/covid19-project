@@ -1,0 +1,107 @@
+{
+  "VACCINURI": [
+    {
+      "title": "Vaccinuri diferite pentru COVID-19",
+      "link": "https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines.html"
+    },
+    {
+      "title": "Vaccinul Janseen COVID-19",
+      "link": "https://en.wikipedia.org/wiki/Janssen_COVID-19_vaccine"
+    },
+    {
+      "title": "Vaccinul Moderna COVID-19",
+      "link": "https://en.wikipedia.org/wiki/Moderna_COVID-19_vaccine"
+    },
+    {
+      "title": "Vaccinul Pfizer-BioNTech COVID-19",
+      "link": "https://en.wikipedia.org/wiki/Pfizer%E2%80%93BioNTech_COVID-19_vaccine"
+    }
+  ],
+  "DESPRE COVID-19": [
+    {
+      "title": "Evoluția virusului SARS-CoV-2",
+      "link": "https://www.who.int/news-room/questions-and-answers/item/sars-cov-2-evolution"
+    },
+    {
+      "title": "Prevalența mare a infecției asimptomatice SARS-CoV-2 arată raspândirea silențioasă a COVID-19",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/33647516/"
+    },
+    {
+      "title": "Cum se transmite COVID-19",
+      "link": "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html"
+    },
+    {
+      "title": "Simptomele bolii COVID-19",
+      "link": "https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
+    },
+    { "title": "Date generale COVID-19", "link": " https://en.wikipedia.org/wiki/Covid-19" },
+    { "title": "Istoric SARS-CoV-2", "link": " https://www.webmd.com/lung/coronavirus-history" },
+    {
+      "title": "Evoluție pandemie COVID-19",
+      "link": " https://en.wikipedia.org/wiki/Timeline_of_the_COVID-19_pandemic"
+    }
+  ],
+  "VARIANTE": [
+    {
+      "title": "Varianta Alpha a virusului SARS-CoV-2",
+      "link": "https://en.wikipedia.org/wiki/SARS-CoV-2_Alpha_variant"
+    },
+    {
+      "title": "Varianta Delta a virusului SARS-CoV-2",
+      "link": "https://en.wikipedia.org/wiki/SARS-CoV-2_Delta_variant"
+    },
+    {
+      "title": "Varianta Omicron a virusului SARS-CoV-2",
+      "link": "https://en.wikipedia.org/wiki/SARS-CoV-2_Omicron_variant"
+    }
+  ],
+  "STRUCTURA VIRUSULUI": [
+    {
+      "title": "Parți ale coronavirusului",
+      "link": "https://www.scripps.edu/covid-19/science-simplified/parts-of-a-coronavirus/index.html"
+    },
+    {
+      "title": "Structura, functia și evoluția proteinei spike la coronavirus",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/27578435/"
+    },
+    {
+      "title": "Structura SARS-CoV-2",
+      "link": "https://geneticeducation.co.in/novel-coronavirus-covid-19-structure-genome-and-testing"
+    }
+  ],
+  "IMPACTUL PANDEMIEI": [
+    {
+      "title": "Consecințe sociale ale carantinării în timpul epidemiilor",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/33051660/"
+    },
+    {
+      "title": "Impact economic COVID-19 în lume",
+      "link": "https://www.stlouisfed.org/publications/regional-economist/third-quarter-2021/covid19s-economic-impact-world"
+    },
+    { "title": "Impact economic COVID-19 2", "link": "https://en.wikipedia.org/wiki/Impact_of_the_COVID-19_pandemic" },
+    {
+      "title": "Rezultate pozitive în timpul carantinei",
+      "link": " https://www.timeout.com/madrid/things-to-do/13-positive-outcomes-to-focus-on-during-times-of-quarantine"
+    },
+    { "title": "Sănătatea mentala COVID-19", "link": "https://www.psycom.net/coronavirus-mental-health" },
+    {
+      "title": "Studiu asupra impactului cauzat de COVID-19 asupra 6 industrii",
+      "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8014102/"
+    }
+  ],
+  "ALTELE": [
+    {
+      "title": "Măsuri preventive contra transmisiei",
+      "link": "https://www.who.int/westernpacific/emergencies/covid-19/information/transmission-protective-measures"
+    },
+    { "title": "Eficacitatea măștilor", "link": "https://www.cdc.gov/mmwr/volumes/71/wr/mm7106e1.htm" },
+    {
+      "title": "Cât de mult supraviețuiește varianta Omicron pe suprafețe",
+      "link": "https://www.newsweek.com/how-long-does-omicron-last-surfaces-does-disinfectant-kill-covid-variant-1677158"
+    },
+    {
+      "title": "Tratamente Covid-19",
+      "link": "https://www.hhs.gov/coronavirus/covid-19-treatments-therapeutics/index.html"
+    }
+  ]
+}

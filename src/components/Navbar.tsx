@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav id="nav" ref={navbarReference}>
+      <nav ref={navbarReference}>
         <NavLink className={ifActiveAddClassNavLink} to={"/"}>
           Acasă
         </NavLink>
@@ -29,11 +29,11 @@ export default function Navbar() {
         <NavLink className={ifActiveAddClassNavLink} to={"/structura"}>
           Structură
         </NavLink>
-        <NavLink className={ifActiveAddClassNavLink} to={"/statistici"}>
-          Statistici
-        </NavLink>
         <NavLink className={ifActiveAddClassNavLink} to={"/impact"}>
           Impact
+        </NavLink>
+        <NavLink className={ifActiveAddClassNavLink} to={"/surse"}>
+          Surse
         </NavLink>
       </nav>
     </>

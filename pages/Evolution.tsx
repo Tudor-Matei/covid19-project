@@ -50,6 +50,7 @@ export default function Evolution({ landingImage }: { landingImage: string }) {
       <TopicTag accent="primary-1">Începuturi</TopicTag>
       <section className="beginnings">
         <div className="beginnings__block beginnings__china">
+          {/* TODO: chrome doesnt display the flag, just the letters "CN". add icon */}
           <h1>🇨🇳</h1>
           <p>
             În decembrie 2019, primele cazuri de COVID-19 au fost identificate în Wuhan, China. Organizația Mondială a

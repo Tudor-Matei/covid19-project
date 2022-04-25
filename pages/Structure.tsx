@@ -7,7 +7,6 @@ import "../src/css/Structure.css";
 const steps: number[] = new Array<number>(100).fill(0).map((_, step) => step * 0.01);
 export default function Structure({ landingImage }: { landingImage: string }) {
   const { ref, inView, entry } = useInView({ threshold: steps });
-  console.log(inView && entry.intersectionRatio);
   return (
     <>
       <section
@@ -43,7 +42,40 @@ export default function Structure({ landingImage }: { landingImage: string }) {
         <StructureDescription align="left" title="Proteine E">
           Au rol important în infecție: facilitează asamblarea și eliberarea virusului din celula gazdă
         </StructureDescription>
-        <div className="e-proteins__covid19-image"></div>
+        <div className="e-proteins__covid19-image">
+          <div className="e-proteins__covid-19-image-ring"></div>
+        </div>
+      </section>
+
+      <section className="membrane">
+        <div className="membrane__covid19-image"></div>
+        <StructureDescription align="center" title="Membrana">
+          Membrana/proteina M oferă virusului forma sa
+        </StructureDescription>
+        <div className="membrane__covid19-image-band"></div>
+      </section>
+
+      <section className="nucleus">
+        <div className="nucleus__covid19-image"></div>
+        <StructureDescription align="right" title="Nucleu">
+          Conține informațiile genetice de bază (ARN și nucleoproteinele)
+        </StructureDescription>
+      </section>
+
+      <section className="nucleoproteins">
+        <StructureDescription align="left" title="Nucleoproteine">
+          Legate de ARN, ele oferă virusului structură, și capacitatea de a se replica
+        </StructureDescription>
+        <div className="nucleoproteins__covid19-image"></div>
+      </section>
+
+      <section className="spike-receptors">
+        <div className="spike-receptors__covid19-image"></div>
+        <StructureDescription align="right" title="Receptori spike">
+          Receptorii spike/proteinele S ajută la cuplarea receptorilor de celulele care urmează să fie infectate. Are
+          două subunități. Prin subunitatea S1, se cuplează de un receptor al celulei gazdă, iar prin subunitatea S2,
+          își îmbină membrana proprie cu membrana gazdei, pentru a putea pătrunde în ea
+        </StructureDescription>
       </section>
     </>
   );
