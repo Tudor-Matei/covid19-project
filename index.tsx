@@ -10,3 +10,4 @@ ReactDOM.createRoot(document.body).render(
     </BrowserRouter>
   </React.StrictMode>
 );
+

@@ -9,7 +9,7 @@ import React, {
 import { NavigateFunction, useNavigate } from "react-router-dom";
 
 export default function AnimatedNavLink({
-  htmlAttributes = {},
+  htmlAttributes,
   to,
   classNameOnCurrent,
   onBeforeChange,
@@ -30,11 +30,11 @@ export default function AnimatedNavLink({
 
   const onClickEvent: MouseEventHandler = useCallback<MouseEventHandler>((event: MouseEvent) => {
     event.preventDefault();
-    console.log(location);
     if (location.pathname === to) return;
 
     if (timeoutIDRef.current !== null) window.clearTimeout(timeoutIDRef.current);
     onBeforeChange();
+    window.scrollTo(0, 0);
     timeoutIDRef.current = window.setTimeout(() => {
       onAfterChange();
       navigate(to);

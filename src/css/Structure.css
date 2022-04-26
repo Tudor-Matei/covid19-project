@@ -34,6 +34,7 @@
   justify-items: center;
   margin-top: -150px;
   margin-bottom: 50px;
+  animation: enterAnimationSmaller 800ms ease forwards;
   position: relative;
 }
 
@@ -67,9 +68,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 48vh auto;
-  opacity: 0;
-  transition: opacity 300ms linear;
+  margin: 40vh auto;
 }
 
 .general-data__covid19-image {
@@ -80,14 +79,27 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
+  transition: opacity 500ms ease, transform 500ms ease;
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.general-data__covid19-image.is-in-view {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.general-data__covid19-image.is-in-view .general-data__covid19-diameter-arrow {
+  width: 100%;
 }
 
 .general-data__covid19-diameter-arrow {
   background: url("../svg//Double-arrow.svg") center center / contain no-repeat;
   height: 100%;
-  width: 100%;
+  width: 0;
   display: grid;
   place-items: center;
+  transition: width 500ms 300ms ease;
 }
 
 .e-proteins {
@@ -103,6 +115,14 @@
   background-color: var(--accent-primary-2-light-1);
   box-shadow: var(--glow-primary-2);
   border-radius: 50%;
+  opacity: 0;
+  transform: rotateZ(360deg);
+  transition: opacity 500ms ease, transform 2s var(--sudden-slow-ending);
+}
+
+.e-proteins__covid19-image.is-in-view {
+  transform: rotateZ(0);
+  opacity: 1;
 }
 
 .e-proteins__covid19-image::before,
@@ -151,9 +171,10 @@
   position: absolute;
   z-index: 1;
   top: 75px;
-  width: 200vw;
+  width: 0;
   height: 50px;
   background-color: var(--accent-primary-1-light-1);
+  transition: width 2s var(--sudden-slow-ending);
 }
 
 .membrane__covid19-image {
@@ -166,6 +187,10 @@
   border-radius: 50%;
 }
 
+.membrane__covid19-image.is-in-view ~ .membrane__covid19-image-band {
+  width: 100vw;
+}
+
 .membrane__covid19-image::after {
   content: "";
   background-color: var(--accent-primary-1-light-1);
@@ -176,6 +201,12 @@
   position: absolute;
   inset: 0;
   margin: auto;
+  transform: scale(0.2);
+  transition: transform 1s ease;
+}
+
+.membrane__covid19-image.is-in-view::after {
+  transform: scale(1);
 }
 
 .nucleus,
@@ -194,6 +225,23 @@
   position: relative;
   background: var(--gradient-primaries-left-right-upper);
   border-radius: 50%;
+}
+
+.nucleus__covid19-image {
+  transform: scale(0);
+  transition: transform 2s var(--sudden-slow-ending);
+}
+
+.nucleus__covid19-image.is-in-view {
+  transform: scale(1);
+}
+
+.nucleus__covid19-image::after {
+  transform: scale(0);
+  transition: transform 5s var(--sudden-slow-ending);
+}
+.nucleus__covid19-image.is-in-view::after {
+  transform: scale(1);
 }
 
 .nucleus__covid19-image::before,
@@ -224,6 +272,14 @@
 
 .nucleoproteins__covid19-image {
   box-shadow: var(--glow-primary-1);
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.nucleoproteins__covid19-image.is-in-view {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .nucleoproteins__covid19-image::before {

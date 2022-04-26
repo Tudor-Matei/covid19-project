@@ -1,5 +1,4 @@
-/*TODO: uncomment when everything is finished*/
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Scope+One&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Scope+One&display=swap");
 
 * {
   box-sizing: border-box;
@@ -37,21 +36,22 @@ body {
 body::before,
 body::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
-  width: 50%;
-  height: 100%;
+  width: 50vw;
+  height: 100vh;
   z-index: 101;
   transition: transform 1000ms ease;
 }
 
 body::before {
   left: 0;
-  /* transform: translateX(-100vw); */
+  transform: translateX(-100vw);
   background-color: var(--accent-primary-1-light-2);
 }
+
 body::after {
-  /* transform: translateX(100vw); */
+  transform: translateX(100vw);
   background-color: var(--accent-primary-2-light-2);
   right: 0;
 }
@@ -77,6 +77,30 @@ section {
   padding-top: 10vh;
   width: 100%;
   min-height: 50vh;
+  animation: enterAnimationLanding 1.2s 800ms var(--sudden-slow-ending) forwards;
+  opacity: 0;
+}
+
+@keyframes enterAnimationLanding {
+  from {
+    transform: translateY(-50vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enterAnimationSmaller {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .title-separator {
@@ -277,7 +301,10 @@ nav::after {
   --selected-shadow-primary-1: 3px 2px 0px var(--accent-primary-1);
   --selected-shadow-primary-2: 3px 2px 0px var(--accent-primary-2);
 
-  /*FONT FAMILIES */
+  /* FONT FAMILIES */
   --font-primary: "Montserrat", Arial, Helvetica, sans-serif;
   --font-secondary: "Scope One", Arial, Helvetica, sans-serif;
+
+  /* ANIMATIONS */
+  --sudden-slow-ending: cubic-bezier(0.25, 0.71, 0.01, 1);
 }

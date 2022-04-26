@@ -199,12 +199,29 @@
   width: 180px;
   height: 180px;
   border: 5px solid;
+  transform: scale(0.8);
+  transition: transform 1s ease;
 }
 
 .variant__title-image::before {
-  transform: rotateZ(45deg);
   border-color: var(--accent-primary-1-light-1);
 }
+
+.variant__title-image.is-in-view::before {
+  transform: scale(1);
+  animation: rotateCovid19Frame 2s 1s var(--sudden-slow-ending) forwards;
+}
+
+.variant__title-image.is-in-view::after {
+  transform: scale(1);
+}
+
+@keyframes rotateCovid19Frame {
+  to {
+    transform: rotateZ(45deg);
+  }
+}
+
 .variant__title-image::after {
   border-color: var(--accent-primary-2);
 }

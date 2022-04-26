@@ -12,7 +12,6 @@ import Sources from "../../pages/Sources";
 import Structure from "../../pages/Structure";
 import capitaliseFirstLetter from "../utils/capitaliseFirstLetter";
 import Navbar from "./Navbar";
-
 export default function App() {
   return (
     <>
