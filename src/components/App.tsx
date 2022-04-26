@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect } from "react";
-import { BrowserRouter, Location, Route, Routes, useLocation } from "react-router-dom";
+import { Location, Route, Routes, useLocation } from "react-router-dom";
 import sourcesLandingImage from "url:../images/Landing-Sources.jpg";
 import evolutionLandingImage from "url:../svg/Landing-Evolution.svg";
 import homeLandingImage from "url:../svg/Landing-Home.svg";
@@ -12,9 +12,10 @@ import Sources from "../../pages/Sources";
 import Structure from "../../pages/Structure";
 import capitaliseFirstLetter from "../utils/capitaliseFirstLetter";
 import Navbar from "./Navbar";
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
       <RouteTitleUpdater>
         <Routes>
@@ -25,15 +26,16 @@ export default function App() {
           <Route path="surse" element={<Sources landingImage={sourcesLandingImage} />} />
         </Routes>
       </RouteTitleUpdater>
-    </BrowserRouter>
+    </>
   );
 }
 
 function RouteTitleUpdater({ children }: { children: ReactNode }) {
-  const { pathname: pathName }: Location = useLocation();
+  const location: Location = useLocation();
+
   useEffect(() => {
-    const title = capitaliseFirstLetter(pathName.replace("/", ""));
+    const title = capitaliseFirstLetter(location.pathname.replace("/", ""));
     document.title = `Atestat COVID-19 | ${title.length === 0 ? "Acasă" : title}`;
-  }, [pathName]);
+  }, [location.key]);
   return <>{children}</>;
 }

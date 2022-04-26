@@ -23,7 +23,7 @@ import "../src/css/Home.css";
 
 export default function Home({ landingImage }: { landingImage: string }) {
   return (
-    <>
+    <main>
       <section
         className="landing landing-home"
         style={{ background: `url(${landingImage}) center center / cover no-repeat` }}
@@ -172,6 +172,6 @@ export default function Home({ landingImage }: { landingImage: string }) {
           </ul>
         </div>
       </section>
-    </>
+    </main>
   );
 }

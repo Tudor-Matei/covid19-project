@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import AnimatedNavLink from "./AnimatedNavLink";
 
 // TODO: remove this at end
 let __STRICT_MODE_EXEC__ = false;
@@ -20,27 +20,27 @@ export default function Navbar() {
   return (
     <>
       <nav ref={navbarReference}>
-        <NavLink className={ifActiveAddClassNavLink} to={"/"}>
-          Acasă
-        </NavLink>
-        <NavLink className={ifActiveAddClassNavLink} to={"/evolutie"}>
-          Evoluție
-        </NavLink>
-        <NavLink className={ifActiveAddClassNavLink} to={"/structura"}>
-          Structură
-        </NavLink>
-        <NavLink className={ifActiveAddClassNavLink} to={"/impact"}>
-          Impact
-        </NavLink>
-        <NavLink className={ifActiveAddClassNavLink} to={"/surse"}>
-          Surse
-        </NavLink>
+        {[
+          ["/", "Acasă"],
+          ["/evolutie", "Evoluție"],
+          ["/structura", "Structură"],
+          ["/impact", "Impact"],
+          ["/surse", "Surse"],
+        ].map(([path, linkTitle], indexKey) => (
+          <AnimatedNavLink
+            key={`path__${path}-${indexKey}`}
+            to={path}
+            animationDuration={0}
+            classNameOnCurrent="nav--selected"
+            onBeforeChange={() => {
+              document.body.classList.add("page-change");
+            }}
+            onAfterChange={() => document.body.classList.remove("page-change")}
+          >
+            {linkTitle}
+          </AnimatedNavLink>
+        ))}
       </nav>
     </>
   );
-}
-
-function ifActiveAddClassNavLink({ isActive }: { isActive: boolean }): string {
-  if (isActive) return "nav--selected";
-  else return "";
 }

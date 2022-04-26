@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 import React, { Fragment } from "react";
 import firstTimeCovid19Image from "url:../src/images/first-time-covid19.jpg";
 import molnupiravirTreatmentImage from "url:../src/images/molnupiravir.jpg";
@@ -15,7 +16,7 @@ import TopicTag from "../src/components/TopicTag";
 import "../src/css/Evolution.css";
 export default function Evolution({ landingImage }: { landingImage: string }) {
   return (
-    <>
+    <main>
       <section
         className="landing landing-evolution"
         style={{ background: `url(${landingImage}) center center / cover no-repeat` }}
@@ -51,7 +52,9 @@ export default function Evolution({ landingImage }: { landingImage: string }) {
       <section className="beginnings">
         <div className="beginnings__block beginnings__china">
           {/* TODO: chrome doesnt display the flag, just the letters "CN". add icon */}
-          <h1>🇨🇳</h1>
+          <h1>
+            <Icon icon="emojione-v1:flag-for-china" />
+          </h1>
           <p>
             În decembrie 2019, primele cazuri de COVID-19 au fost identificate în Wuhan, China. Organizația Mondială a
             Sănătății a declarat epidemia de atunci ca fiind o situație de interes internațional, îngrijorătoare din
@@ -179,6 +182,6 @@ export default function Evolution({ landingImage }: { landingImage: string }) {
           </div>
         ))}
       </section>
-    </>
+    </main>
   );
 }
