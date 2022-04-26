@@ -3,7 +3,7 @@
   "description": "Atestat",
   "scripts": {
     "dev": "parcel --no-cache index.html",
-    "build": "parcel build"
+    "build": "parcel build index.html"
   },
   "devDependencies": {
     "@iconify/react": "^3.2.1",
