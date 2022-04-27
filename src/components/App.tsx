@@ -1,4 +1,5 @@
-import React, { ReactNode, useEffect } from "react";
+import { Icon } from "@iconify/react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { Location, Route, Routes, useLocation } from "react-router-dom";
 import sourcesLandingImage from "url:../images/Landing-Sources.jpg";
 import evolutionLandingImage from "url:../svg/Landing-Evolution.svg";
@@ -16,6 +17,7 @@ export default function App() {
   return (
     <>
       <Navbar />
+      <SmallScreenSizeAlert />
       <RouteTitleUpdater>
         <Routes>
           <Route index element={<Home landingImage={homeLandingImage} />} />
@@ -37,4 +39,34 @@ function RouteTitleUpdater({ children }: { children: ReactNode }) {
     document.title = `Atestat COVID-19 | ${title.length === 0 ? "Acasă" : title}`;
   }, [location.key]);
   return <>{children}</>;
+}
+
+function SmallScreenSizeAlert() {
+  const [currentDimensions, setCurrentDimensions] = useState<{ width: number; height: number }>({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      console.log(1);
+      if (window.innerWidth < 1024 || window.innerHeight < 400)
+        setCurrentDimensions({ width: window.innerWidth, height: window.innerHeight });
+    });
+  }, []);
+
+  return (
+    <div className="small-screen-size">
+      <Icon icon="carbon:fit-to-screen" />
+      <h1>
+        Mărimea ecranului dumneavoastră este prea mică:{" "}
+        <span>
+          {currentDimensions.width}x{currentDimensions.height}
+        </span>
+      </h1>
+      <p>
+        Site-ul acesta nu a fost optimizat pentru mărimi <span>mai mici de 1024x400</span>.
+      </p>
+    </div>
+  );
 }
