@@ -51,7 +51,6 @@ export default function Evolution({ landingImage }: { landingImage: string }) {
       <TopicTag accent="primary-1">Începuturi</TopicTag>
       <section className="beginnings">
         <div className="beginnings__block beginnings__china">
-          {/* TODO: chrome doesnt display the flag, just the letters "CN". add icon */}
           <h1>
             <Icon icon="emojione-v1:flag-for-china" />
           </h1>
@@ -119,7 +118,7 @@ export default function Evolution({ landingImage }: { landingImage: string }) {
         <VariantDetails variantType="Delta" variantCodename="B.1.617.2" countryOfOriginSVG={IndiaSVG}>
           {[
             <Fragment key="Variant_Fragment_Delta-1">
-              <li key="Delta_01">A fost detectată prima dată în Marea Britanie, în luna noiembrie a anului 2020</li>
+              <li key="Delta_01">A fost detectată prima dată în India, la sfârșitul anului 2020</li>
               <li key="Delta_02">
                 A înlocuit virusul inițial pe plan global pentru o perioadă de timp, din cauza transmisibilității
                 deosebite, estimată ca fiind până la 50% mai transmisibilă decât varianta Alpha

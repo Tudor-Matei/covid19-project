@@ -49,7 +49,6 @@ function SmallScreenSizeAlert() {
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      console.log(1);
       if (window.innerWidth < 1024 || window.innerHeight < 400)
         setCurrentDimensions({ width: window.innerWidth, height: window.innerHeight });
     });

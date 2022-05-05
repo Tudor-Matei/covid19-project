@@ -69,7 +69,7 @@ export default function Impact({ landingImage }: { landingImage: string }) {
         <div className="mental-health__pane">
           <p>
             Există multe perspective din care poate fi privită această pandemie, și din care se pot analiza diverse
-            riscuri. În urma acestor incertitudini, oamenii dezvoltă un nivel ridicat de anxietate, și stres, care poate
+            riscuri. În urma acestor incertitudini, oamenii dezvoltă un nivel ridicat de anxietate, și stres, care pot
             exacerba gândurile negativiste.
           </p>
           <ThemedImage src={anxietyImage} />
