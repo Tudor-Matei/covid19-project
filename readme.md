@@ -2,6 +2,8 @@
 
 I have made this project for obtaining the Computer Science Certificate awarded at the end of high-school. It is a presentation about important information known at that time about the SARS-CoV-2 virus that caused the COVID-19 pandemic in 2020.
 
+The project is online at http://atestat-covid-19.glitch.me/
+
 # Technologies used
 
 This project uses the following technologies:
